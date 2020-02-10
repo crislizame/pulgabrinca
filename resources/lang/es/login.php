@@ -13,4 +13,5 @@ return [
     "term_condition" => "Terminos y Condiciones",
     "register" => "Registrate",
     "sign_in_with" => "Ingresa usando ",
+    "login/register" => "Log in / Registrate",
 ];

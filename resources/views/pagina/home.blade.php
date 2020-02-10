@@ -9,45 +9,21 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-push-1 col-lg-10">
                     <div class="tg-categoriessearch">
                         <div class="tg-title">
-                            <h2><span>Boost your search with</span> Trending Categories</h2>
+                            <h2><span>Encuentra Lo Que Buscas En Nuestras</span> Categorias Mas Populares</h2>
                         </div>
                         <div id="tg-categoriesslider" class="tg-categoriesslider tg-categories owl-carousel">
+                            @php
+                                $categories = (new \App\Categorie())->get();
+                            @endphp
+                            @forelse($categories as $category)
                             <div class="tg-category">
                                 <div class="tg-categoryholder">
-                                    <figure><img src="{{asset("assets/images/icons/img-08.png")}}" alt="image description"></figure>
-                                    <h3>Mobiles</h3>
+                                    <figure><img src="{{asset('storage/'.$category->img)}}" alt="image description" style="width: 100px;"></figure>
+                                    <h3>{{$category->name}}</h3>
                                 </div>
                             </div>
-                            <div class="tg-category">
-                                <div class="tg-categoryholder">
-                                    <figure><img src="{{asset("assets/images/icons/img-09.png")}}" alt="image description"></figure>
-                                    <h3>Electronics</h3>
-                                </div>
-                            </div>
-                            <div class="tg-category">
-                                <div class="tg-categoryholder">
-                                    <figure><img src="{{asset("assets/images/icons/img-10.png")}}" alt="image description"></figure>
-                                    <h3>Vehicles</h3>
-                                </div>
-                            </div>
-                            <div class="tg-category">
-                                <div class="tg-categoryholder">
-                                    <figure><img src="{{asset("assets/images/icons/img-11.png")}}" alt="image description"></figure>
-                                    <h3>Bikes</h3>
-                                </div>
-                            </div>
-                            <div class="tg-category">
-                                <div class="tg-categoryholder">
-                                    <figure><img src="{{asset("assets/images/icons/img-12.png")}}" alt="image description"></figure>
-                                    <h3>Animals</h3>
-                                </div>
-                            </div>
-                            <div class="tg-category">
-                                <div class="tg-categoryholder">
-                                    <figure><img src="{{asset("assets/images/icons/img-13.png")}}" alt="image description"></figure>
-                                    <h3>Furniture</h3>
-                                </div>
-                            </div>
+                                @empty
+                            @endforelse
                         </div>
                     </div>
                 </div>
@@ -66,10 +42,10 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="tg-sectionhead">
                         <div class="tg-title">
-                            <h2>Featured Ads</h2>
+                            <h2>Anuncios Destacados</h2>
                         </div>
                         <div class="tg-description">
-                            <p>Over 10,56,432 Featured Ads</p>
+                            <p>Cerca de {{(new \App\Product())->where('status','2')->count()}} anuncios destacados</p>
                         </div>
                     </div>
                 </div>

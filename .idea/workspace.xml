@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2dae800-8557-4cdb-ae5f-c6591d03db7f" name="Default Changelist" comment="" />
+    <list default="true" id="c2dae800-8557-4cdb-ae5f-c6591d03db7f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/Ad/PostAdController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/es/client.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vistas/pages/dashboard/ad/post.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_02_042709_create_user_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_02_042709_create_user_types_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/es/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/es/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pagina/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pagina/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vistas/include/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vistas/include/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vistas/include/includedash/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vistas/include/includedash/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vistas/pages/dashboard/inicio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vistas/pages/dashboard/inicio.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <list id="dd88997f-99a6-4cc8-8794-8082dcb21398" name="initial commitment" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,8 +176,12 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1QwApDnh5MWeyN3bxjB4VWeBan7" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -168,14 +189,14 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../api_mis_gafas/WS" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -236,6 +257,19 @@
       <workItem from="1577815527657" duration="714000" />
       <workItem from="1577819271201" duration="1305000" />
       <workItem from="1577823506764" duration="1495000" />
+      <workItem from="1577834377779" duration="1134000" />
+      <workItem from="1577919037620" duration="13000" />
+      <workItem from="1578367148409" duration="3534000" />
+      <workItem from="1578456347344" duration="688000" />
+      <workItem from="1578519020557" duration="1440000" />
+      <workItem from="1578668086669" duration="994000" />
+      <workItem from="1578858687885" duration="127000" />
+      <workItem from="1579998840066" duration="16235000" />
+      <workItem from="1580472025765" duration="598000" />
+      <workItem from="1580478754967" duration="102000" />
+      <workItem from="1580683552486" duration="2840000" />
+      <workItem from="1580830703858" duration="7854000" />
+      <workItem from="1580949564309" duration="5766000" />
     </task>
     <task id="LOCAL-00001" summary="initial commitment">
       <created>1577815796338</created>
@@ -251,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577826310580</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="initial commitment">
+      <created>1577834427212</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1577834427212</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +324,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commitment" />
     <option name="LAST_COMMIT_MESSAGE" value="initial commitment" />
   </component>

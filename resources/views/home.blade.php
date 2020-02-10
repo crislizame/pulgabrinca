@@ -41,14 +41,14 @@
 				Home Slider Start
 		*************************************-->
                 <div id="tg-homebanner" class="tg-homebanner tg-haslayout">
-                    <figure class="item" data-vide-bg="poster: {{asset('assets/images/slider/img-01.jpg')}}" data-vide-options="position: 50% 50%">
+                    <figure class="item" data-vide-bg="poster: {{asset('storage/fondos/fondo.jpg')}}" data-vide-options="position: 50% 50%">
                         <figcaption>
                             <div class="container">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                         <div class="tg-bannercontent">
-                                            <h1>World’s Largest Marketplace</h1>
-                                            <h2>Search from 12,45,754 Awesome Verified Ads!</h2>
+                                            <h1>La Pulga Brinca</h1>
+                                            <h2>En Toda El Area De La Bahia De San Francisco</h2>
                                             <form class="tg-formtheme tg-formbannersearch">
                                                 <fieldset>
                                                     <div class="form-group tg-inputwithicon">
@@ -93,7 +93,7 @@
 				Home Slider Start
 		*************************************-->
         <div id="tg-innerbanner" class="tg-innerbanner tg-haslayout">
-            <figure data-vide-bg="poster: {{asset('assets/images/slider/img-01.jpg')}}" data-vide-options="position: 50% 50%">
+            <figure data-vide-bg="poster: {{asset('storage/fondos/fondo.jpg')}} " data-vide-options="position: 50% 50%">
                 <figcaption>
                     <div class="container">
                         <div class="row">

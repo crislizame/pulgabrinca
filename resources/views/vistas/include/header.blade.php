@@ -6,91 +6,94 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <ul class="tg-navcurrency">
-                        <li><a href="#" data-toggle="modal" data-target="#tg-modalselectcurrency">select currency</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#tg-modalpriceconverter">Price converter</a></li>
-                    </ul>
+{{--                    <ul class="tg-navcurrency">--}}
+{{--                        <li><a href="#" data-toggle="modal" data-target="#tg-modalselectcurrency">select currency</a></li>--}}
+{{--                        <li><a href="#" data-toggle="modal" data-target="#tg-modalpriceconverter">Price converter</a></li>--}}
+{{--                    </ul>--}}
 
                     <div class="dropdown tg-themedropdown tg-userdropdown">
+                        @if(!auth()->check())
                         <a class="tg-btn" href="{{route('login')}}" style="background-color: #dee347!important;color: #444!important;">
                             <i class="icon-user"></i>
-                            <span>Login/Register</span>
+                            <span>{{__('login.login/register')}}</span>
                         </a>
-{{--                        <a href="javascript:void(0);" id="tg-adminnav" class="tg-btndropdown" data-toggle="dropdown">--}}
-{{--                            <span class="tg-userdp"><img src="{{asset('assets/images/author/img-01.jpg')}}" alt="image description"></span>--}}
-{{--                            <span class="tg-name">Hi! Angelena</span>--}}
-{{--                            <span class="tg-role">Administrator</span>--}}
-{{--                        </a>--}}
-{{--                        <ul class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-adminnav">--}}
-{{--                            <li>--}}
-{{--                                <a href="dashboard.html">--}}
-{{--                                    <i class="icon-chart-bars"></i>--}}
-{{--                                    <span>Insights</span>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                            <li>--}}
-{{--                                <a href="dashboard-profile-setting.html">--}}
-{{--                                    <i class="icon-cog"></i>--}}
-{{--                                    <span>Profile Settings</span>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                            <li class="menu-item-has-children">--}}
-{{--                                <a href="javascript:void(0);">--}}
-{{--                                    <i class="icon-layers"></i>--}}
-{{--                                    <span>My Ads</span>--}}
-{{--                                </a>--}}
-{{--                                <ul>--}}
-{{--                                    <li><a href="dashboard-myads.html">All Ads</a></li>--}}
-{{--                                    <li><a href="dashboard-myads.html">Featured Ads</a></li>--}}
-{{--                                    <li><a href="dashboard-myads.html">Active Ads</a></li>--}}
-{{--                                    <li><a href="dashboard-myads.html">Inactive Ads</a></li>--}}
-{{--                                    <li><a href="dashboard-myads.html">Sold Ads</a></li>--}}
-{{--                                    <li><a href="dashboard-myads.html">Expired Ads</a></li>--}}
-{{--                                    <li><a href="dashboard-myads.html">Deleted Ads</a></li>--}}
-{{--                                </ul>--}}
-{{--                            </li>--}}
-{{--                            <li>--}}
-{{--                                <a href="dashboard-postanad.html">--}}
-{{--                                    <i class="icon-layers"></i>--}}
-{{--                                    <span>Dashboard Post Ad</span>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                            <li class="menu-item-has-children">--}}
-{{--                                <a href="javascript:void(0);">--}}
-{{--                                    <i class="icon-envelope"></i>--}}
-{{--                                    <span>Offers/Messages</span>--}}
-{{--                                </a>--}}
-{{--                                <ul>--}}
-{{--                                    <li><a href="dashboard-offermessages.html">Offer Received</a></li>--}}
-{{--                                    <li><a href="dashboard-offermessages.html">Offer Sent</a></li>--}}
-{{--                                    <li><a href="dashboard-offermessages.html">Trash</a></li>--}}
-{{--                                </ul>--}}
-{{--                            </li>--}}
-{{--                            <li>--}}
-{{--                                <a href="dashboard-payments.html">--}}
-{{--                                    <i class="icon-cart"></i>--}}
-{{--                                    <span>Payments</span>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                            <li>--}}
-{{--                                <a href="dashboard-myfavourites.html">--}}
-{{--                                    <i class="icon-heart"></i>--}}
-{{--                                    <span>My Favourite</span>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                            <li>--}}
-{{--                                <a href="dashboard-privacy-setting.html">--}}
-{{--                                    <i class="icon-star"></i>--}}
-{{--                                    <span>Privacy Settings</span>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                            <li>--}}
-{{--                                <a href="javascript:void(0);">--}}
-{{--                                    <i class="icon-exit"></i>--}}
-{{--                                    <span>Logout</span>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                        </ul>--}}
+                        @else
+                        <a href="javascript:void(0);" id="tg-adminnav" class="tg-btndropdown" data-toggle="dropdown">
+                            <span class="tg-userdp"><img src="{{asset('assets/images/author/img-01.jpg')}}" alt="image description"></span>
+                            <span class="tg-name">Hola! {{auth()->user()->name}}</span>
+                            <span class="tg-role">{{auth()->user()->email}}</span>
+                        </a>
+                        <ul class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-adminnav">
+                            <li>
+                                <a href="{{route("dashboard")}}">
+                                    <i class="icon-chart-bars"></i>
+                                    <span>Panel de control</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="dashboard-profile-setting.html">
+                                    <i class="icon-cog"></i>
+                                    <span>Profile Settings</span>
+                                </a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="javascript:void(0);">
+                                    <i class="icon-layers"></i>
+                                    <span>My Ads</span>
+                                </a>
+                                <ul>
+                                    <li><a href="dashboard-myads.html">All Ads</a></li>
+                                    <li><a href="dashboard-myads.html">Featured Ads</a></li>
+                                    <li><a href="dashboard-myads.html">Active Ads</a></li>
+                                    <li><a href="dashboard-myads.html">Inactive Ads</a></li>
+                                    <li><a href="dashboard-myads.html">Sold Ads</a></li>
+                                    <li><a href="dashboard-myads.html">Expired Ads</a></li>
+                                    <li><a href="dashboard-myads.html">Deleted Ads</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="dashboard-postanad.html">
+                                    <i class="icon-layers"></i>
+                                    <span>Dashboard Post Ad</span>
+                                </a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="javascript:void(0);">
+                                    <i class="icon-envelope"></i>
+                                    <span>Offers/Messages</span>
+                                </a>
+                                <ul>
+                                    <li><a href="dashboard-offermessages.html">Offer Received</a></li>
+                                    <li><a href="dashboard-offermessages.html">Offer Sent</a></li>
+                                    <li><a href="dashboard-offermessages.html">Trash</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="dashboard-payments.html">
+                                    <i class="icon-cart"></i>
+                                    <span>Payments</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="dashboard-myfavourites.html">
+                                    <i class="icon-heart"></i>
+                                    <span>My Favourite</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="dashboard-privacy-setting.html">
+                                    <i class="icon-star"></i>
+                                    <span>Privacy Settings</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <i class="icon-exit"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                            @endif
                     </div>
                 </div>
             </div>
@@ -101,9 +104,9 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <strong class="tg-logo"><a href="{{route('home')}}"><img src="{{asset('assets/images/logo.png')}}"alt="company logo here"></a></strong>
-                    <a class="tg-btn" href="dashboard-postanad.html">
+                    <a class="tg-btn" href="#">
                         <i class="icon-bookmark"></i>
-                        <span>post an ad</span>
+                        <span>crea un anuncio</span>
                     </a>
                     <nav id="tg-nav" class="tg-nav">
                         <div class="navbar-header">
@@ -116,12 +119,12 @@
                         </div>
                         <div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
                             <ul>
-                                <li class="menu-item-has-children">
-                                    <a href="javascript:void(0);">Home</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">Home V1</a></li>
-                                        <li><a href="indexv2.html">Home V2</a></li>
-                                    </ul>
+                                <li class="">
+                                    <a  href="{{route('home')}}">Inicio</a>
+{{--                                    <ul class="sub-amenu">--}}
+{{--                                        <li><a href="index.html">Home V1</a></li>--}}
+{{--                                        <li><a href="indexv2.html">Home V2</a></li>--}}
+{{--                                    </ul>--}}
                                 </li>
                                 <li class="menu-item-has-children current-menu-item">
                                     <a href="javascript:void(0);">Listings</a>

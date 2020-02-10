@@ -19,6 +19,8 @@ Auth::routes();
 Route::any('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-
+Route::middleware(['auth'])->group(function () {
+    Route::any('dashboard/postad', 'Dashboard\Ad\PostAdController@index')->name('dashboard/postad');
+});
 
 

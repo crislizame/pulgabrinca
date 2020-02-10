@@ -13,12 +13,9 @@
         </div>
         <div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
             <ul>
-                <li class="menu-item-has-children">
-                    <a href="javascript:void(0);">Home</a>
-                    <ul class="sub-menu">
-                        <li><a href="index.html">Home V1</a></li>
-                        <li><a href="indexv2.html">Home V2</a></li>
-                    </ul>
+                <li class="">
+                    <a href="{{url("/")}}">Inicio</a>
+
                 </li>
                 <li class="menu-item-has-children current-menu-item">
                     <a href="javascript:void(0);">Listings</a>
@@ -64,7 +61,7 @@
         </div>
     </nav>
     <div class="tg-rghtbox">
-        <a class="tg-btn" href="dashboard-postanad.html">
+        <a class="tg-btn" href="{{route('dashboard/postad')}}">
             <i class="icon-bookmark"></i>
             <span>post an ad</span>
         </a>
@@ -115,9 +112,9 @@
             <nav id="tg-navdashboard" class="tg-navdashboard">
                 <ul>
                     <li class="tg-active">
-                        <a href="dashboard.html">
+                        <a href="{{route("dashboard")}}">
                             <i class="icon-chart-bars"></i>
-                            <span> Insights</span>
+                            <span>Panel de control</span>
                         </a>
                     </li>
                     <li>
@@ -197,16 +194,4 @@
 <!--************************************
         Header End
 *************************************-->
-<!--************************************
-        Dashboard Banner Start
-*************************************-->
-<div class="tg-dashboardbanner">
-    <h1>Dashboard</h1>
-    <ol class="tg-breadcrumb">
-        <li><a href="javascript:void(0);">Main</a></li>
-        <li class="tg-active">Dashboard</li>
-    </ol>
-</div>
-<!--************************************
-        Dashboard Banner End
-*************************************-->
+
